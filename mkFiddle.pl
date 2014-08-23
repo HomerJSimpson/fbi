@@ -9,8 +9,6 @@ use File::Slurp;
 
 my $d = LoadFile('Demo/demo.details') or die $!;
 
-print Dumper $d;
-
 print <<EOT;
 <!DOCTYPE html>
 <html>
@@ -39,11 +37,12 @@ print <<EOT;
     /* your custom CSS \*/
 EOT
 
+my $css = read_file('Demo/demo.css');
+my $js = read_file('Demo/demo.js');
+my $html = read_file('Demo/demo.html');
+
 print <<EOT;
-</style>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+$css
 <style>
 
 
@@ -53,8 +52,7 @@ print <<EOT;
 
 <script type='text/javascript'>//<![CDATA[ 
 
-$(function() {
-});
+$js
 
 //]]>  
 
@@ -63,7 +61,7 @@ $(function() {
 
 </head>
 <body>
-  <div id="main">
+  $html
 </div>
 
   

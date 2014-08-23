@@ -7,7 +7,7 @@
 all : debug
 
 run debug: mkFiddle
-	./mkFiddle
+	./mkFiddle > index.html
 
 clean :
 	-rm -f mkFiddle
