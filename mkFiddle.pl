@@ -16,12 +16,12 @@ print <<EOT;
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>$d->{name}</title>
   
-  <script type='text/javascript' src='/js/lib/dummy.js'></script>
+  <script type='text/javascript' src='http://jsfiddle.net/js/lib/dummy.js'></script>
   
   
   
   
-  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  <link rel="stylesheet" type="text/css" href="http://jsfiddle.net/css/result-light.css">
 EOT
   
 foreach my $css (@{$d->{resources}}) {
